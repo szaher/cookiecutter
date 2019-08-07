@@ -1,21 +1,22 @@
-If you would like to contribute to the development of OpenStack, you must
+If you would like to contribute to the development of {{cookiecutter.service}}, you must
 follow the steps in this page:
 
-   http://docs.openstack.org/infra/manual/developers.html
+   {{cookiecutter.docs_website}}
 
 If you already have a good understanding of how the system works and your
-OpenStack accounts are set up, you can skip to the development workflow
-section of this documentation to learn how changes to OpenStack should be
-submitted for review via the Gerrit tool:
+accounts are set up, you can skip to the development workflow
+section of this documentation to learn how changes to {{cookiecutter.service}} should be
+submitted for review via the {{cookiecutter.review_site}}:
 
-   http://docs.openstack.org/infra/manual/developers.html#development-workflow
+   {{cookiecutter.docs_website}}
 
-Pull requests submitted through GitHub will be ignored.
 
 Bugs should be filed on {{ cookiecutter.bug_tracker }}
 
 {%- if cookiecutter.bug_tracker == 'Launchpad' -%}
    https://bugs.launchpad.net/{{ cookiecutter.bug_project }}
-{%- elif cookiecutter.bug_tracker == 'Storyboard' -%}
-   https://storyboard.openstack.org/#!/project/{{ cookiecutter.bug_project }}
+{%- elif cookiecutter.bug_tracker == 'Github' -%}
+   https://github.com/{{ cookiecutter.repo_group }}/{{ cookiecutter.bug_project }}/issues
+{%- elif cookiecutter.bug_tracker == 'Gitlab' -%}
+   https://gitlab.com/{{ cookiecutter.repo_group }}/{{ cookiecutter.bug_project }}/issues
 {%- endif -%}

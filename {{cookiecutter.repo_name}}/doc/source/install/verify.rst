@@ -14,11 +14,4 @@ Verify operation of the {{cookiecutter.service}} service.
 
    .. code-block:: console
 
-      $ . admin-openrc
-
-#. List service components to verify successful launch and registration
-   of each process:
-
-   .. code-block:: console
-
-      $ openstack {{cookiecutter.service|lower}} service list
+      $ {{cookiecutter.module_name}} -h

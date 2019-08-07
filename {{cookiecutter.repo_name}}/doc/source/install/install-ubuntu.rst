@@ -4,7 +4,7 @@ Install and configure for Ubuntu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes how to install and configure the {{cookiecutter.service}}
-service for Ubuntu 14.04 (LTS).
+service for Ubuntu 18.04 (LTS).
 
 .. include:: common_prerequisites.rst
 
@@ -28,4 +28,4 @@ Restart the {{cookiecutter.service}} services:
 
 .. code-block:: console
 
-   # service openstack-{{cookiecutter.module_name}}-api restart
+   # service {{cookiecutter.module_name}}-api restart

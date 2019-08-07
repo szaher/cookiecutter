@@ -35,7 +35,8 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'openstackdocstheme',
+    'sphinx.ext.todo',
+    'sphinx.ext.githubpages',
     'reno.sphinxext',
 ]
 
@@ -53,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'{{cookiecutter.module_name}} Release Notes'
-copyright = u'2017, OpenStack Developers'
+copyright = u'2017, {{cookiecutter.repo_group}} Developers'
 
 # openstackdocstheme options
 repository_name = '{{cookiecutter.repo_group}}/{{cookiecutter.repo_name}}'
@@ -114,7 +115,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'openstackdocs'
+html_theme = 'p-main_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -214,7 +215,7 @@ latex_elements = {
 latex_documents = [
     ('index', '{{cookiecutter.module_name}}ReleaseNotes.tex',
      u'{{cookiecutter.module_name}}  Release Notes Documentation',
-     u'OpenStack Foundation', 'manual'),
+     u'{{cookiecutter.repo_group}}', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -245,7 +246,7 @@ latex_documents = [
 man_pages = [
     ('index', '{{cookiecutter.module_name}}rereleasenotes',
      u'{{cookiecutter.module_name}}  Release Notes Documentation',
-     [u'OpenStack Foundation'], 1)
+     [u'{{cookiecutter.repo_group}}'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -260,7 +261,7 @@ man_pages = [
 texinfo_documents = [
     ('index', '{{cookiecutter.module_name}} ReleaseNotes',
      u'{{cookiecutter.module_name}} Release Notes Documentation',
-     u'OpenStack Foundation', '{{cookiecutter.module_name}}ReleaseNotes',
+     u'{{cookiecutter.repo_group}}', '{{cookiecutter.module_name}}ReleaseNotes',
      'One line description of project.',
      'Miscellaneous'),
 ]

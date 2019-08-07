@@ -29,6 +29,6 @@ the system boots:
 
 .. code-block:: console
 
-   # systemctl enable openstack-{{cookiecutter.module_name}}-api.service
+   # systemctl enable {{cookiecutter.module_name}}-api.service
 
-   # systemctl start openstack-{{cookiecutter.module_name}}-api.service
+   # systemctl start {{cookiecutter.module_name}}-api.service

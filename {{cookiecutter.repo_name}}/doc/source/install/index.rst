@@ -19,6 +19,6 @@
 
 The {{cookiecutter.service}} service ({{cookiecutter.module_name}}) provides...
 
-This chapter assumes a working setup of OpenStack following the
-`OpenStack Installation Tutorial
-<https://docs.openstack.org/project-install-guide/ocata/>`_.
+This chapter assumes a working setup of  following the
+`Installation Tutorial
+<{{cookiecutter.docs_website}}>`_.

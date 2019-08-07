@@ -14,6 +14,7 @@
 
 import os
 import sys
+from PSphinxTheme import utils
 
 sys.path.insert(0, os.path.abspath('../..'))
 # -- General configuration ----------------------------------------------------
@@ -22,7 +23,9 @@ sys.path.insert(0, os.path.abspath('../..'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'openstackdocstheme',
+    'sphinx.ext.todo',
+    'sphinx.ext.githubpages',
+    # 'openstackdocstheme',
     #'sphinx.ext.intersphinx',
 ]
 
@@ -38,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'{{cookiecutter.repo_name}}'
-copyright = u'2017, OpenStack Developers'
+copyright = u'2017, {{cookiecutter.repo_group}} Developers'
 
 # openstackdocstheme options
 repository_name = '{{cookiecutter.repo_group}}/{{cookiecutter.repo_name}}'
@@ -63,7 +66,8 @@ pygments_style = 'sphinx'
 # html_theme_path = ["."]
 # html_theme = '_theme'
 # html_static_path = ['static']
-html_theme = 'openstackdocs'
+# html_theme = 'openstackdocs'
+html_theme = 'p-main_theme'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = '%sdoc' % project
@@ -75,8 +79,11 @@ latex_documents = [
     ('index',
      '%s.tex' % project,
      u'%s Documentation' % project,
-     u'OpenStack Developers', 'manual'),
+     u'{{cookiecutter.repo_group}} Developers', 'manual'),
 ]
 
 # Example configuration for intersphinx: refer to the Python standard library.
 #intersphinx_mapping = {'http://docs.python.org/': None}
+
+p, html_theme, needs_sphinx = utils.set_psphinxtheme(html_theme)
+html_theme_path = p
