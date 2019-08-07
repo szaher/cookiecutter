@@ -15,6 +15,7 @@
 import os
 import sys
 from PSphinxTheme import utils
+from {{cookiecutter.module_name}} import __version__ as version_info
 
 sys.path.insert(0, os.path.abspath('../..'))
 # -- General configuration ----------------------------------------------------
@@ -35,6 +36,10 @@ extensions = [
 
 # The suffix of source filenames.
 source_suffix = '.rst'
+
+# version & release
+version = version_info
+release = version_info
 
 # The master toctree document.
 master_doc = 'index'
