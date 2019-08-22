@@ -7,5 +7,7 @@
 	"bug_project": "replace with the name of the project on Launchpad or the ID from Github or Gitlab",
 	"project_short_description": "Boilerplate contains all the boilerplate you need to create an pythonic package.",
 	"docs_website": "Documentation website https://docs.website.com/",
-	"review_site": "Review website, if not provide github or gitlab url"
+	"review_site": "Review website, if not provide github or gitlab url",
+	"program_name": "Entry point name to be called from CLI. This is the name of CLI command",
+
 }

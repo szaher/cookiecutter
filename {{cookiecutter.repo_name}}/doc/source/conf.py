@@ -24,6 +24,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinxcontrib.apidoc',
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
     # 'openstackdocstheme',
@@ -41,8 +42,14 @@ source_suffix = '.rst'
 version = version_info
 release = version_info
 
+# build code reference for {{ cookiecutter.module_name }}
+pidoc_module_dir = '../../{{ cookiecutter.module_name }}'
+apidoc_output_dir = 'reference/api'
+apidoc_separate_modules = True
+
 # The master toctree document.
 master_doc = 'index'
+
 
 # General information about the project.
 project = u'{{cookiecutter.repo_name}}'

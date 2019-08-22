@@ -1,12 +1,12 @@
-======================
-cookiecutter-openstack
-======================
+============
+cookiecutter
+============
 
 Cookiecutter template for an Pythonic project. See https://github.com/audreyr/cookiecutter.
 
 * Free software: Apache license
 * pbr_: Set up to use Python Build Reasonableness
-* hacking_: Enforces the OpenStack Hacking Guidelines
+* hacking_: Enforces Your Hacking Guidelines
 * stestr_: Runs tests using stestr
 * Tox_ testing: Setup to easily test for Python 2.7, 3.5
 * Sphinx_ docs: Documentation ready for generation and publication
