@@ -43,7 +43,7 @@ version = version_info
 release = version_info
 
 # build code reference for {{ cookiecutter.module_name }}
-pidoc_module_dir = '../../{{ cookiecutter.module_name }}'
+apidoc_module_dir = '../../{{ cookiecutter.module_name }}'
 apidoc_output_dir = 'reference/api'
 apidoc_separate_modules = True
 

@@ -12,10 +12,11 @@ LOG = logging.getLogger(__name__)
 
 def setup_args(args=[]):
     parser = argparse.ArgumentParser(prog="{{ cookiecutter.program_name }}", description="{{ cookiecutter.service }}")
-    parser.add_argument("-d", "--debug", help="Enable debugging")
+    parser.add_argument("-d", "--debug", help="Enable debugging", action="store_true")
     parser.add_argument("--log-file", help="Log file")
     parser.add_argument("--log-level",
-                        choices=[logging.DEBUG, logging.CRITICAL, logging.INFO, logging.WARNING, logging.ERROR],
+                        choices=["debug", "critical", "info", "warning", "error"],
+                        default=logging.INFO,
                         help="Log level")
     if not args:
         parser.print_usage()
@@ -31,6 +32,18 @@ def setup_logging(log_file, log_level):
     :param log_level: Log level
     :return:
     """
+    if log_level == "debug":
+        log_level = logging.DEBUG
+    elif log_level == "critical":
+        log_level = logging.CRITICAL
+    elif log_level == "info":
+        log_level = logging.INFO
+    elif log_level == "warning":
+        log_level = logging.WARNING
+    elif log_level == "error":
+        log_level = logging.ERROR
+    else:
+        log_level = logging.INFO
     logging.basicConfig(filename=log_file, level=log_level,
                         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
